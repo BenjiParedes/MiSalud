@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Miembro - Gigi Valenzuela</title>
+    <link rel="stylesheet" href="styles_grupo_2.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        header .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .user img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%; /* Asegura que la imagen de usuario sea un círculo perfecto */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            background-color: white;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-header {
+            position: relative; /* Necesario para posicionar el botón dentro de este contenedor */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            padding-top: 20px; /* Espaciado superior para que no quede pegado */
+        }
+
+        .member-header h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .member-options {
+            position: absolute; /* Lo posicionamos en la esquina superior derecha */
+            top: 0;
+            right: 0; /* Aquí se coloca el botón a la derecha */
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .member-options:hover {
+            background-color: #0056b3;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .option {
+            background-color: #f5f5f5;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .option .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .option span {
+            display: block;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .option a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .member-header img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        /* Efecto hover para oscurecer los botones */
+        .option:hover {
+            background-color: #e0e0e0; /* Color más oscuro en hover */
+            transform: scale(1.05); /* Ligera animación de expansión */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Reemplazar el logo por la imagen proporcionada -->
+            <img src="image.png" alt="MiSalud">
+            <span>MiSalud</span>
+        </div>
+        <nav>
+            <a href="#">Grupo familiar</a>
+            <a href="#">Ficha médica</a>
+            <a href="#">Registro médico</a>
+            <a href="#">Historial médico</a>
+        </nav>
+        <div class="user">
+            <img src="usuario.jpeg" alt="Usuario"> <!-- Cambié la imagen de usuario a "usuario.jpeg" -->
+            <span>Pepito</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="member-header">
+            <img src="gigi.jpg" alt="Gigi Valenzuela"> <!-- Imagen de Gigi a la izquierda -->
+            <h1>Gigi Valenzuela</h1>
+            <button class="member-options">Opciones de miembro</button>
+        </div>
+        <p class="subtitle">Accede de una forma más eficiente a los registros de Gigi:</p>
+        <div class="options-grid">
+            <!-- Los botones ahora son clickeables y las flechas han sido eliminadas -->
+            <div class="option">
+                <a href="#">
+                    <div class="icon">📊</div>
+                    <span>Diagnósticos</span> <!-- Eliminar flecha -->
+                </a>
+            </div>
+            <div class="option">
+                <a href="#">
+                    <div class="icon">💊</div>
+                    <span>Medicamentos</span> <!-- Eliminar flecha -->
+                </a>
+            </div>
+            <div class="option">
+                <a href="#">
+                    <div class="icon">📋</div>
+                    <span>Historial médico</span> <!-- Eliminar flecha -->
+                </a>
+            </div>
+            <div class="option">
+                <a href="#">
+                    <div class="icon">📅</div>
+                    <span>Próximas consultas</span> <!-- Eliminar flecha -->
+                </a>
+            </div>
+            <div class="option">
+                <a href="#">
+                    <div class="icon">🩺</div>
+                    <span>Ficha médica</span> <!-- Eliminar flecha -->
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
