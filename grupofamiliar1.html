@@ -64,7 +64,7 @@
         header .user img {
             height: 40px;
             width: 40px;
-            border-radius: 50%;
+            border-radius: 50%; /* Asegura que la imagen de usuario sea un círculo perfecto */
         }
 
         main {
@@ -104,19 +104,14 @@
         .members .member img {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 50%; /* Hace las imágenes de los miembros circulares */
+            object-fit: cover; /* Asegura que la imagen se ajuste dentro del círculo */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
         }
 
         .members .member img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        a {
-            text-decoration: none;
-            color: black; /* Color negro para el nombre */
+            transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
         }
 
         .members .arrow {
@@ -130,27 +125,6 @@
 
         .members .arrow:hover {
             color: #0056b3;
-        }
-
-        /* Botón para agregar un miembro */
-        .add-member {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100px;
-            height: 100px;
-            border: 2px dashed #007BFF;
-            border-radius: 50%;
-            color: #007BFF;
-            font-size: 36px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .add-member:hover {
-            background-color: #007BFF;
-            color: white;
         }
 
         .admin-btn {
@@ -171,6 +145,7 @@
 <body>
     <header>
         <div class="logo">
+            <!-- Reemplazar el logo por la imagen proporcionada -->
             <img src="image.png" alt="MiSalud">
             <span>MiSalud</span>
         </div>
@@ -209,17 +184,12 @@
                     <span>Paz Valenzuela</span>
                 </div>
             </a>
-            <a href="grupofamiliar2.html">
+            <a href="grupofamiliar2.html"> <!-- Cambié esta parte para redirigir al HTML correspondiente -->
                 <div class="member">
                     <img src="gigi.jpg" alt="Gigi Valenzuela">
                     <span>Gigi Valenzuela</span>
                 </div>
             </a>
-            <!-- Botón para agregar miembro -->
-             <a href="#">
-                <div class="add-member">+</div>
-                <span>Agregar miembro</span>
-             </a>
             <button class="arrow right">❯</button>
         </div>
         <button class="admin-btn">Administrar grupo</button>
